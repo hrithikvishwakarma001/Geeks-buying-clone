@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="//content1.geekbuying.com/V1.4/en/css/icon_font.min.css?v=20221107" type="text/css">
+		<title>
+			Geekbuying: Online Shopping for Smart and Comfortable Life
+		</title>
+        <link rel="stylesheet" href="/css/head-top.css" type="text/css">
+        <style>
+            .top-mid{
+                margin-top: 11px;
+                height: 83px;
+                border-top: 1.5px solid rgba(211, 211, 211,0.5);
+                border-bottom: 1.5px solid white;
+                /* border: 2px solid rgb(0, 255, 72); */
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                
+            }
+            .top-mid img{
+                width: 12%;
+                margin-top: 8px;
+                margin-right: -125px;
+                margin-left :40px; ;
+            }
+            .input{
+                width: 710px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 5px;
+                /* border: 1px solid rgba(0, 251, 255, 0.5); */
+                margin-left: 110px;
+                
+            }
+            .dropbtn{
+                border: none;
+                background: #fff;
+                width: 150px;
+                padding: 0px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* border: 1px solid red; */
+                padding: 5px;
+                cursor: pointer;
+                color: #4e4c4c;
+            }
+            .dropbtn i{
+                /* border: 1px solid red; */
+                margin-left: 10px;
+             
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+                color: #989898;
+            }
+            .dropdown-content{
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .search-input{
+                width: 600px;
+                height: 40px;
+                border: none;
+                outline: none;
+                padding: 0px 20px;
+                font-size: 16px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+            }
+            .divider{
+                width: 1px;
+                height: 20px;
+                background-color: #989898;
+            }
+            #search{
+                width: 300px;
+                height: 40px;
+                border: none;
+                outline: none;
+                padding: 0px 20px;
+                font-size: 16px;
+                /* border: 1px solid red; */
+                margin-right: 150px;
+                
+            }
+            .search-btn{
+                width: 50px;
+                color: #1577fd;
+                border: none;
+                background-color: #ffffff;
+                font-size: 25px;
+                cursor: pointer;
+                border-radius: 5px;
+                /* border: 1px solid red; */
+                margin-top: 10px;
+            }
+           .sign-up{
+                width: 250px;
+                height: 40px;
+                border: none;
+                outline: none;
+                color: white;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                /* border: 1px solid red; */
+                display: flex;
+                justify-content: space-around;
+           }
+           .sign-up-child{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+           }
+           .sign-up-child>i{
+                 font-size: 30px;
+              }
+
+              /* ----------------------------------------- */
+       
+               .main{
+                   background-color: #fff;
+                   display: flex;
+                   align-items: center;
+                   justify-content: space-between;
+                   border: 2px solid red;
+                   gap: 20px;
+                   width: 85%;
+                   margin: auto;
+                   margin-top: 20px;
+                   border-radius: 10px;
+               }
+               .img-div{
+                     background-color: #fff;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     border: 2px solid red;
+               }
+               .img-div img{
+                     width:100%;
+
+               }
+               
+
+        </style>
+	</head>
+	<body>
+		<header>
+			<div class="head">
+                <div class="top-head">
+                    <div class="head-top">
+                        <div class="h-top-child">
+                            <span>
+                                <i class="bx bx-mobile-alt"></i>
+                                <p>Save BIG with our app!</p>
+                                <i class="upArrow"></i>
+                            </span>
+                        </div>
+                        <div class="h-top-child">
+                            <span>
+                                <p>Language</p>
+                                <i class="upArrow"></i>
+                            </span>
+                        </div>
+                        <div class="h-top-child">
+                            <span>
+                                <p>Support Center</p>
+                                <i class="upArrow"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="none-element">
+                        <div class="none-parent-1">
+                            <i class='bx bxs-up-arrow'></i>
+                            <div class="none-box">
+                                <div><a href="#">Download app to get up to 70% off app-only deals and coupons worth $50</a></div>
+                                <div>
+                                    <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" alt="">
+                                    <div>
+                                        <div><a href="#"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt=""></a></div>
+                                        <div><a href="#"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt=""></a></div>
+                                        <div><a href="#"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt=""></a></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div><a href="#">Go to mobile</a></div>
+                            </div>
+                        </div>
+                        <div class="none-parent-2">
+                            <i class='bx bxs-up-arrow langArrow'></i>
+                            <div class="language">
+                                <dl name="" id="select">
+                                    <dd value="English">English</dd>
+                                    <dd value="Deutsch">Deutsch</dd>
+                                    <dd value="Italiano">Italiano</dd>
+                                    <dd value="Español">Español</dd>
+                                    <dd value="Français">Français</dd>
+                                    <dd value="Português">Português</dd>
+                                    <dd value="Slovenčina">Slovenčina</dd>
+                                    <dd value="Magyar">Magyar</dd>
+                                    <dd value="Lietuvių kalba ">Lietuvių kalba </dd>
+                                    <dd value="Svenska ">Svenska </dd>
+                                    <dd value="Ελληνικά ">Ελληνικά </dd>
+                                    <dd value="Dansk ">Dansk </dd>
+                                    <dd value="עברית ">עברית </dd>
+                                    <dd value="Hrvatski jezik ">Hrvatski jezik </dd>
+                                    <dd value="Polskie ">Polskie </dd>
+                                    <dd value="Limba română ">Limba română </dd>
+                                    <dd value="Čeština ">Čeština </dd>
+                                    <dd value="Japanese ">Japanese </dd>
+                                </dl>
+                                    
+                            </div>
+                        </div>
+                        <div class="none-parent-3">
+                            <i class='bx bxs-up-arrow SupportArrow' ></i>
+                            <div class="support">
+                                
+                                  <div class="s-child">
+                                    <i class="top_icons icon-live_chat"></i>
+                                    <div class="p-1"><p>Live Chat</p></div>
+                                    
+                                 </div>
+                                 <div class="s-child">
+                                     <i><img src="/images/ticket.png" width="24px"></img></i>
+                                     <div class="p-2"><p>Ticket</p></div>
+                                        
+                                    </div>
+                                    <div class="s-child">
+                                        <i class="top_icons icon-help_center"></i>
+                                        <div class="p-3"><p>Help Center</p></div>
+                                        
+                                    </div>
+                               
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+            <div class="mid">
+                    <div class="top-mid">
+                            <img src="/images/logo.png" alt="">
+                            <div class="input">
+                                <div class="dropdown">
+                                    <button class="dropbtn">
+                                        All Categories
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Link 1</a>
+                                        <a href="#">Link 2</a>
+                                        <a href="#">Link 3</a>
+                                    </div>
+                                </div>
+                                <div class="divider">
+                                </div>
+                                <div class="search-input">
+                                    <input type="text" id="search" placeholder="Search by keywords">
+                                    <button class="search-btn"><i class="bx bx-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="sign-up">
+                                <div class="sign-up-child">
+                                    <i class="bx bx-user"></i>
+                                    <p>Sign in</p>
+                                </div>
+                                <div class="sign-up-child">
+                                    <i class="bx bx-cart"></i>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                    </div>
+            </div>
+		</header>
+		<main>
+            <div class="main">
+                    <div>
+                        <img src="https://img.gkbcdn.com/bn/2211/740x670-636382c52b40c94424fc21e0._p1_.jpg" alt="">
+                    </div>
+                    <div class="cards">
+                        <span><h2>Deal of the Day</h2></span>
+                        <div id="time" ></div>
+                        <div class="img-div">
+                                <div>
+                                    <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt=""> <br>
+                                    <button>10% OFF</button>
+                                    <h3>₹754.21</h3>
+                                    <del>₹838.10</del>
+                                    <progress id="file" value="50" max="100"> 100% </progress>
+                                </div>
+                                <div>
+                                    <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt=""> <br>
+                                    <button>10% OFF</button>
+                                    <h3>₹754.21</h3>
+                                    <del>₹838.10</del>
+                                    <progress id="file" value="50" max="100"> 100% </progress>
+                                </div>
+                                <div>
+                                    <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt=""> <br>
+                                    <button>10% OFF</button>
+                                    <h3>₹754.21</h3>
+                                    <del>₹838.10</del>
+                                    <progress id="file" value="50" max="100"> 100% </progress>
+                                </div>
+                                <div>
+                                    <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt=""> <br>
+                                    <button>10% OFF</button>
+                                    <h3>₹754.21</h3>
+                                    <del>₹838.10</del>
+                                    <progress id="file" value="50" max="100"> 100% </progress>
+                                </div>
+                        </div>
+                        <div class="img-div">
+                            <div>
+                                <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt=""> <br>
+                                <button>10% OFF</button>
+                                <h3>₹754.21</h3>
+                                <del>₹838.10</del>
+                                <progress id="file" value="50" max="100"> 100% </progress>
+                            </div>
+                            <div>
+                                <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt=""> <br>
+                                <button>10% OFF</button>
+                                <h3>₹754.21</h3>
+                                <del>₹838.10</del>
+                                <progress id="file" value="50" max="100"> 100% </progress>
+                            </div>
+                            <div>
+                                <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt=""> <br>
+                                <button>10% OFF</button>
+                                <h3>₹754.21</h3>
+                                <del>₹838.10</del>
+                                <progress id="file" value="50" max="100"> 100% </progress>
+                            </div>
+                            <div>
+                                <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt=""> <br>
+                                <button>10% OFF</button>
+                                <h3>₹754.21</h3>
+                                <del>₹838.10</del>
+                                <progress id="file" value="50" max="100"> 100% </progress>
+                            </div>
+                              
+                        </div>
+                       
+                    </div>
+            </div>
+        </main>
+		<footer></footer>
+	</body>
+</html>
+<script>
+     let hover = document.querySelectorAll('.h-top-child');
+     let noneParent1 = document.querySelector('.none-parent-1');
+     let noneParent2 = document.querySelector('.none-parent-2');
+     let noneParent3 = document.querySelector('.none-parent-3');
+     let select = document.querySelector('#select');
+        let dd = document.querySelectorAll('dd');
+        dd.forEach((item)=>{
+            item.onmouseover=()=>{
+                item.style.cursor = 'pointer';
+            }
+        })
+     let arrow = document.querySelectorAll('.upArrow');
+        
+     hover[0].onmouseover =  () => {
+            noneParent1.style.display = 'block';
+     }
+     
+     hover[0].onmouseout =  () => {
+                noneParent1.style.display = 'none';
+     }
+     hover[1].onmouseover =  () => {
+            noneParent2.style.display = 'block';
+     }
+     hover[1].onmouseout =  () => {
+                noneParent2.style.display = 'none';
+     }
+     hover[2].onmouseover =  () => {
+            noneParent3.style.display = 'block';
+     }
+     hover[2].onmouseout =  () => {
+                noneParent3.style.display = 'none';
+     }
+     noneParent1.onmouseover = () => {
+        noneParent1.style.display = 'block';
+     }
+     noneParent1.onmouseout = () => {
+        noneParent1.style.display = 'none';
+     }
+     noneParent2.onmouseover = () => {
+        noneParent2.style.display = 'block';
+     }
+     noneParent2.onmouseout = () => {
+        noneParent2.style.display = 'none';
+     }
+     noneParent3.onmouseover = () => {
+        noneParent3.style.display = 'block';
+     }
+     noneParent3.onmouseout = () => {
+        noneParent3.style.display = 'none';
+     }
+
+
+       
+         
+
+</script>
