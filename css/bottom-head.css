@@ -1,0 +1,53 @@
+.bottom-head{
+    display: flex;
+    width: 1500px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+.manu-list{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 650px;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+.menu a{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    font-weight: 650;
+    line-height: 20px;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+ }
+.category{
+  width: 126px;
+  height: 35px;
+  line-height: 35px;
+  position: relative;
+  z-index: 22;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+  background-color: #428dff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1px 2px;
+}
+
+.category-icon>i{
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    display: block;
+    background: #fff;
+    margin-top: 3px;
+}
+
+.geek{
+    margin-left: 10px;
+}
