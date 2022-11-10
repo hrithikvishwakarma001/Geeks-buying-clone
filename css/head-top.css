@@ -1,10 +1,19 @@
 * {
     margin: 0;
     padding: 0;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
     z-index: 1000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
     font-weight: 600;
 }
+
 header{
     background-image: linear-gradient(to bottom, #318ffb, #0066ff);
 }
@@ -115,7 +124,11 @@ header{
 
 .none-parent-1{
     position: absolute;
+
+    right: 400px;
+
     right: 455px;
+
     display: none;
 }
 .none-parent-2{
@@ -148,6 +161,10 @@ header{
     position: relative;
     left: 140px;
     margin-top: -8.6px;
+
+    z-index: 1;
+
+
 }
 .langArrow{
     margin-left: 160%;
