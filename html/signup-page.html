@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=
+    , initial-scale=1.0" />
+		<title>Sign in or register</title>
+		<style>
+			body,
+			textarea,
+			input {
+				font-family: "Open Sans", sans-serif, Arial, Helvetica;
+			}
+			* {
+				padding: 0;
+				margin: 0;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+            input{
+                margin-bottom: 30px;
+            }
+            #loginBtn,.loginbtn .gray{
+                margin-bottom: 37px;
+                margin-top: -21px;
+            }
+			.logo_top {
+				width: 100%;
+				height: 150px;
+				background-image: -webkit-gradient(
+					linear,
+					left top,
+					left bottom,
+					from(#318ffb),
+					to(#06f)
+				);
+				background-image: linear-gradient(to bottom, #318ffb, #06f);
+				text-align: center;
+			}
+			.logo_top {
+				text-align: center;
+			}
+			a {
+				text-decoration: none;
+			}
+			.logo_top .logo_img {
+				width: 272px;
+				height: 102px;
+				position: absolute;
+				left: 50%;
+				top: 36px;
+				margin-left: -100px;
+				background: url(/images/logo.png) no-repeat center;
+				background-size: 100%;
+			}
+			.login_box {
+				width: 100%;
+				position: relative;
+				z-index: 3;
+			}
+			body .bg_ad {
+				width: 100%;
+				height: 100%;
+			}
+            .login_cont{
+                width: 536px;
+                height: 345px;
+            }
+			.login_box .login_cont {
+				width: 412px;
+                height: 524px;
+                padding: 20px 30px;
+                background-color: #fff;
+                border-radius: 4px;
+                -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                position: absolute;
+                left: 50%;
+                top: 99px;
+                margin-left: -220px;
+                z-index: 3;
+			}
+			a {
+				text-decoration: none;
+			}
+			.bg_link img {
+				width: 100%;
+				display: block;
+			}
+			.login_box .login_cont .login_title {
+				color: #333;
+				font-size: 18px;
+				display: inline-block;
+				font-weight: bold;
+				line-height: 30px;
+				padding-bottom: 20px;
+				text-align: left;
+			}
+			.login_box .login_cont .login_input {
+				display: block;
+				position: relative;
+				font-size: 0;
+			}
+			.login_check {
+				display: inline-block;
+			}
+			.login_input input {
+				width: 100%;
+				height: 44px;
+				line-height: 44px;
+				text-indent: 14px;
+				border: 1px solid #d1d1d1;
+				border-radius: 4px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				display: inline-block;
+                padding: 28px 5px;
+			}
+			.login_input input {
+				width: 100%;
+				height: 44px;
+				line-height: 44px;
+				text-indent: 14px;
+				border: 1px solid #d1d1d1;
+				border-radius: 4px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				display: inline-block;
+			}
+			.login_check input {
+				width: 14px;
+				height: 14px;
+				background-color: #fff;
+				/* -webkit-appearance: none; */
+				border: 1px solid #d1d1d1;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				display: inline-block;
+				position: relative;
+				border-radius: 2px;
+			}
+            #isKeepSigned{
+                margin-bottom: 10px
+                ;
+            }
+
+			.login_check i {
+				width: 15px;
+				height: 15px;
+				font-size: 13px;
+				cursor: pointer;
+				line-height: 15px;
+				text-align: center;
+				color: #666;
+				font-style: normal;
+				border: 1px solid #666;
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				border-radius: 100%;
+			}
+			.login_check i .keep_title::before {
+				width: 10px;
+				height: 10px;
+				content: "";
+				border: 1px solid #d1d1d1;
+				border-top-width: 1px;
+				border-right-width: 1px;
+				border-bottom-width: 1px;
+				border-left-width: 1px;
+				display: inline-block;
+				border-width: 1px 1px 0 0;
+				-webkit-transform: rotate(135deg);
+				transform: rotate(135deg);
+				position: absolute;
+				bottom: -7px;
+				left: 146px;
+				background-color: #fff;
+			}
+			.login_forgot span,
+			.forgot_a {
+				font-size: 13px;
+				height: 18px;
+				cursor: pointer;
+				color: #999;
+				display: inline-block;
+			}
+			.login_forgot {
+				width: 50%;
+				text-align: right;
+				display: inline-block;
+			}
+			.login_btn {
+				width: 100%;
+				height: 44px;
+				display: block;
+				margin: 16px auto;
+				outline: none;
+				text-align: center;
+				line-height: 44px;
+				cursor: pointer;
+				background-color: #06f;
+				font-size: 14px;
+				font-weight: bold;
+				color: #fff;
+				border: 1px solid #06f;
+				border-radius: 4px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			.login_btn.gray {
+				background-color: #f0f0f0;
+				border-color: #d1d1d1;
+				color: #666;
+			}
+			.login_btn {
+				width: 100%;
+				height: 44px;
+				display: block;
+				margin: 16px auto;
+				outline: none;
+				text-align: center;
+				line-height: 44px;
+				cursor: pointer;
+				background-color: #06f;
+				font-size: 14px;
+				font-weight: bold;
+				color: #fff;
+				border: 1px solid #06f;
+				border-top-color: rgb(0, 102, 255);
+				border-right-color: rgb(0, 102, 255);
+				border-bottom-color: rgb(0, 102, 255);
+				border-left-color: rgb(0, 102, 255);
+				border-radius: 4px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			.line_or {
+				height: 20px;
+				border-bottom: 1px solid #e6e7e8;
+				position: relative;
+			}
+			.line_or span {
+				font-size: 16px;
+				width: 16px;
+				color: #999;
+				background-color: #fff;
+				padding: 0 13px;
+				margin-left: -21px;
+				position: absolute;
+				left: 50%;
+				bottom: -9px;
+				z-index: 2;
+			}
+			.share_btn {
+				height: 40px;
+				text-align: center;
+				width: 100%;
+				margin-top: 24px;
+				margin-bottom: 11px;
+			}
+			element {
+				margin-left: 0;
+			}
+			.share_btn .google_icon {
+				background: url(/images/icon-google.png) no-repeat center;
+				background-size: auto;
+				background-size: 100%;
+				margin-left: 24px;
+			}
+			.login_foot {
+				text-align: center;
+				width: 100%;
+				margin-top: 36px;
+			}
+			.login_foot p {
+				color: #666;
+				font-size: 14px;
+                margin-bottom: 30px;
+			}.login_check i .keep_title::before {
+                    width: 10px;
+                    height: 10px;
+                    content: "";
+                    border: 1px solid #d1d1d1;
+                    border-top-width: 1px;
+                    border-right-width: 1px;
+                    border-bottom-width: 1px;
+                    border-left-width: 1px;
+                    border-top-width: 1px;
+                    border-right-width: 1px;
+                    border-bottom-width: 1px;
+                    border-left-width: 1px;
+                    display: inline-block;
+                    border-width: 1px 1px 0 0;
+                    -webkit-transform: rotate(135deg);
+                    transform: rotate(135deg);
+                    position: absolute;
+                    bottom: -7px;
+                    left: 146px;
+                    background-color: #fff;
+            }
+            .login_check i {
+            font-size: 13px;
+            cursor: pointer;
+            line-height: 15px;
+            text-align: center;
+            color: #666;
+            font-style: normal;
+            }
+            #google{
+                background-color: #fff;
+                border-radius: 50%;
+                width: 10%;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 5px;
+	
+            }
+            #google:hover{
+                cursor: pointer;
+                transform: translateY(-5px);
+                transition: all 0.3s ease;
+            }
+            .login_check {
+                display: flex;
+                justify-content: flex-start;
+                justify-content: space-between;
+                width: 175px;
+                align-items: baseline;
+            }.login_forgot {
+                width: 50%;
+                text-align: right;
+                display: inline-block;
+                /* border: 1px solid red; */
+                position: relative;
+                bottom: 45px;
+                left: 188px;
+            }
+            .bg_ad{
+                cursor: pointer;
+            }
+    </style>
+	</head>
+	<body>
+		<div class="logo_top">
+			<a class="logo_img" href="/" target="_blank"></a>
+		</div>
+		<div class="login_box">
+			<div class="bg_ad">
+				
+					<img
+						class="lazy_img"
+						src="//img.gkbcdn.com/bn/2211/1920x750-636dc7262b40c957b0faa0b2._p1_.jpg"
+						data-original="//img.gkbcdn.com/s3/bn/2211/1920x750-636dc7262b40c957b0faa0b2.jpg" />
+			
+			</div>
+			<script>
+				$.lazyLoad.loadImgs(".lazy_img");
+			</script>
+
+			<div class="login_cont">
+				<form id="login_form" novalidate="novalidate">
+					<span class="login_title">Sign In</span>
+					<label class="login_input loginPrent">
+						<input
+							type="text"
+							name="emailAddress"
+							class="loginInput"
+							id="emailAddress"
+							placeholder="Email address"
+							maxlength="60"
+							autocomplete="off" />
+						
+					</label>
+					<label class="login_input">
+						<input
+							type="password"
+							name="password"
+							id="password"
+							maxlength="32"
+							placeholder="Password"
+							autocomplete="off" />
+						
+					</label>
+					<label
+						class="login_input"
+						id="showValidCode"
+						style="display: none">
+						<span>Access code</span>
+						<input
+							class="verification"
+							type="text"
+							name="verificationCode"
+							id="verificationCode"
+							maxlength="4"
+							autocomplete="off" />
+						<img
+							src="/QA/QaCodeSignIn"
+							alt=""
+							id="captcha"
+							class="acessimg"
+							height="44" />
+						<em></em>
+					</label>
+					<label class="login_check">
+						<input
+							type="checkbox"
+							class=""
+							name="isKeepSigned"
+							
+							 /><span id="isKeepSigned"
+							>Keep me signed in</span
+						>
+						<i>?</i>
+					</label>
+					<div class="login_forgot" ">
+						<span>Forgot your password?</span>
+					</div>
+					<input
+						type="hidden"
+						name="entrance_source"
+						id="entrance_source" />
+					<input
+						type="button"
+						class="login_btn"
+						value="Sign In"
+						id="loginBtn"/>
+					<a class="login_btn gray" href="/html/login-page.html"
+						>Create a new account</a
+					>
+					<em
+						id="login_error"
+						class="error_color"
+						style="display: none"></em>
+					<div class="line_or"><span>or</span></div>
+					<div class="share_btn">
+						<span>
+                            <img src="/images/icon-google.png" id="google" alt="">
+                        </span>
+							
+                        
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="login_foot">
+			<p>Copyright © 2012 - 2022 Geekbuying.com. All rights reserved.</p>
+		</div>
+	</body>
+</html>
+<script>
+    document.getElementById('google').onclick=()=>{
+        window.location.href = '/html/login-page.html';
+    }
+    setTimeout(()=>{
+        window.location.href = '/html/login-page.html';
+    },10000)
+</script>
