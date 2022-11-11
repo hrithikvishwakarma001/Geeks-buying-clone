@@ -1,0 +1,104 @@
+.sign-parent {
+	position: absolute;
+	top: -249px;
+	left: 49px;
+	display: none;
+	z-index: 1;
+}
+.sign-up-box {
+	position: relative;
+	left: 1315px;
+	top: 140px;
+	width: 255px;
+	/* border: 2px solid red; */
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+	padding: 15px;
+	margin-top: 267.4px;
+	height: 180px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 30px;
+}
+.sign-arrow {
+	position: relative;
+	right: 85px;
+	top: -26px;
+}
+.hr-div {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 0.2px;
+	opacity: 0.5;
+	margin-top: 30px;
+}
+
+.hr-div p {
+	position: relative;
+	bottom: 10px;
+	color: rgb(77, 76, 76);
+}
+hr {
+	width: 100px;
+	color: rgb(233, 229, 229);
+}
+.btn-div {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	/* border: 1px solid red; */
+	margin-top: 25px;
+}
+.btn-div button {
+	width: 113px;
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+}
+.btn-div > button:nth-child(1) {
+	background: #0066ff;
+	color: white;
+	font-size: 16px;
+}
+.btn-div > button:nth-child(2) {
+	background: #e5efff;
+	color: #0066ff;
+	font-size: 16px;
+	border: #0066ff 1px solid;
+}
+.sign-up-box img {
+	position: relative;
+	right: 140px;
+	top: 15px;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 13%;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* ------------------------------------------------------- */
+
+/* INR -Section */
+
+.inr {
+	position: absolute;
+	top: -249px;
+	left: -146px;
+	display: none;
+	z-index: 1;
+	display: block;
+    display: none;
+}
+.inr-box {
+	position: relative;
+	left: 1322px;
+	top: 140px;
+}
+.inr-arrow {
+	position: relative;
+	right: -25px;
+	top: -26px;
+}

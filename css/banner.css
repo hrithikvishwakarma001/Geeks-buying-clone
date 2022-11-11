@@ -1,0 +1,116 @@
+.main_sale {
+    background-color: #06f;
+}
+.main_sale_banner {
+    height: 215px;
+    background: url(/images/banner.png) no-repeat center;
+    padding: 100px 0 50px 0;
+    position: relative;
+
+    background-size: 95% ;
+}
+.wrap_w,
+#longbanner {
+    width: 1500px;
+}
+.wrap_w,
+#longbanner {
+    margin: 0 auto;
+}
+.main_sale_banner a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 0;
+}
+a {
+    text-decoration: none;
+}
+.main_sale_products {
+    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.main_sale_item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 120px;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 17, 255, 0)),
+        to(rgb(0, 17, 255))
+    );
+    background-image: linear-gradient(
+        rgba(0, 17, 255, 0),
+        rgb(0, 17, 255)
+    );
+}
+.main_sale_pic {
+    width: 240px;
+    height: 240px;
+    display: block;
+    margin: 0 auto;
+}
+.main_sale_name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+.main_sale_item a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    font-size: 0;
+}
+.main_sale_item {
+    width: 284px;
+    height: 284px;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+.main_sale_item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 120px;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 17, 255, 0)),
+        to(rgb(0, 17, 255))
+    );
+    background-image: linear-gradient(
+        rgba(0, 17, 255, 0),
+        rgb(0, 17, 255)
+    );
+}
+a:hover {
+    text-decoration: none;
+}

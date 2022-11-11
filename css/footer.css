@@ -1,11 +1,11 @@
-footer { 
+footer {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: #f1f6fc; 
-} 
-.footer-img{
-    cursor: pointer;
+	background-color: #f1f6fc;
+}
+.footer-img {
+	cursor: pointer;
 }
 .foot_wrap {
 	margin-top: 20px;
