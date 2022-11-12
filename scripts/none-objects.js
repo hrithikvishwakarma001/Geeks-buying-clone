@@ -118,3 +118,21 @@ inr.onmouseout = () => {
 }
 
 // ------------------------------
+
+let cart = document.querySelector(".cart-box");
+let cartParent = document.querySelector("#cart-box-parent");
+
+cart.onmouseover = () => {
+	cart.style.cursor = "pointer";
+	cartParent.style.display = "block";
+}
+cart.onmouseout = () => {
+	cartParent.style.display = "none";
+}
+cartParent.onmouseover = () => {
+	cartParent.style.cursor = "pointer";
+	cartParent.style.display = "block";
+}
+cartParent.onmouseout = () => {
+	cartParent.style.display = "none";
+}

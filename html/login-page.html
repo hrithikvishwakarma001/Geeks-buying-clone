@@ -120,7 +120,7 @@
 				-webkit-box-sizing: border-box;
 				box-sizing: border-box;
 				display: inline-block;
-                padding: 28px 5px;
+                padding: 25px 5px;
 			}
 			.login_input input {
 				width: 100%;
@@ -346,11 +346,18 @@
             #AccessCode{
                 width:235px
             }
+            #captcha{
+                width: 168px;
+                height: 62px;
+                position: absolute;
+                left: 276px;
+                bottom: 191px;
+            }
     </style>
 	</head>
 	<body>
 		<div class="logo_top">
-			<a class="logo_img" href="/" target="_blank"></a>
+			<a class="logo_img" href="/html/index.html" target="_blank"></a>
 		</div>
 		<div class="login_box">
 			<div class="bg_ad">
@@ -361,18 +368,14 @@
 						data-original="//img.gkbcdn.com/s3/bn/2211/1920x750-636dc7262b40c957b0faa0b2.jpg" />
 			
 			</div>
-			<script>
-				$.lazyLoad.loadImgs(".lazy_img");
-			</script>
-
 			<div class="login_cont">
 				<form id="login_form" novalidate="novalidate">
 					<span class="login_title">Create your account</span>
-                    <span class="login_title login">Sign In</span>
+                    <span class="login_title login"> <a href="/html/signup-page.html">Sign In</a> </span>
 					<label class="login_input loginPrent">
 						<input
 							type="text"
-							name="emailAddress"
+							name="ninkName"
 							class="loginInput"
 							id="ninkName"
 							placeholder="Nick name"
@@ -382,7 +385,7 @@
 					</label>
 					<label class="login_input loginPrent">
 						<input
-							type="text"
+							type="email"
 							name="emailAddress"
 							class="loginInput"
 							id="emailAddress"
@@ -404,13 +407,13 @@
 					<label class="login_input loginPrent">
 						<input
 							type="text"
-							name="emailAddress"
 							class="loginInput"
 							id="AccessCode"
 							placeholder="Access code"
 							maxlength="60"
 							autocomplete="off" />
 						
+                            
 					</label>
 					<label
 						class="login_input"
@@ -418,26 +421,27 @@
 						style="display: none">
 						<span>Access code</span>
 						<input
-							class="verification"
-							type="text"
-							name="verificationCode"
-							id="verificationCode"
-							maxlength="4"
-							autocomplete="off" />
-						<img
-							src="/QA/QaCodeSignIn"
-							alt=""
-							id="captcha"
-							class="acessimg"
-							height="44" />
+                        class="verification"
+                        type="text"
+                        name="verificationCode"
+                        id="verificationCode"
+                        maxlength="4"
+                        autocomplete="off" />
+                        
 						<em></em>
 					</label>
+                    <img
+                    src="/images/captcha.jpg"
+                    alt=""
+                    id="captcha"
+                    class="acessimg"
+                    height="44" />
 					<label class="login_check">
 						<input
 							type="checkbox"
 							class=""
 							name="isKeepSigned"
-							
+							width="100%"
 							 /><span id="isKeepSigned"
 							>Keep me signed in</span
 						>
@@ -453,7 +457,7 @@
 					<input
 						type="button"
 						class="login_btn"
-						value="Sign In"
+						value="Create account"
 						id="loginBtn"/>
 				</form>
 			</div>
@@ -464,10 +468,34 @@
 	</body>
 </html>
 <script>
-    document.getElementById('google').onclick=()=>{
-        window.location.href = '/html/login-page.html';
-    }
-    setTimeout(()=>{
-        window.location.href = '/html/login-page.html';
-    },10000)
+ let createAccountBtn = document.getElementById('loginBtn')
+    
+ createAccountBtn.onclick = () =>{
+    console.log('clicked')
+    let arr = JSON.parse(localStorage.getItem('users')) || []
+      
+    let ninkName = document.getElementById('ninkName').value
+    let emailAddress = document.getElementById('emailAddress').value
+    let password = document.getElementById('password').value
+    let AccessCode = document.getElementById('AccessCode').value
+   
+   if(ninkName == '' || emailAddress == '' || password == '' || AccessCode == ''){
+       alert('Please fill in all the fields')
+    }else{
+        let user = {
+        name :ninkName,
+        email :emailAddress,
+        password:password,
+        captcha :AccessCode
+       }
+        arr.push(user)
+        console.log(arr)
+        localStorage.setItem('users', JSON.stringify(arr))
+		
+		window.location.href = '/html/succes.html'
+		
+    } 
+  
+ }
+
 </script>

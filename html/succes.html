@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Success</title>
+		<style>
+            *{
+                font-family: sans-serif;
+            }
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+		</style>
+	</head>
+	<body>
+		<img
+			src="https://cdn.dribbble.com/users/1138069/screenshots/8974973/media/2b32ae97856da7406151c6ae6ea086cc.gif"
+			alt="" />
+		<h1>Account created successfully</h1>
+	</body>
+</html>
+
+<script>
+    setInterval(() => {
+        window.location.href = "/html/signup-page.html";
+    }, 3000);
+
+    window.onload=()=>{
+        document.querySelector("img").style.width = "800px";
+    }
+</script>
