@@ -1,0 +1,148 @@
+.sickers {
+	width: 100%;
+	height: 325px;
+	background-repeat: no-repeat;
+    margin-bottom: 50px;
+}
+.flash {
+	font-size: 33px;
+	font-weight: 500;
+	color: #d81414;
+	display: block;
+	text-align: center;
+	padding: 20px 0;
+	line-height: 48px;
+    margin-bottom: 28px;
+}
+.mid-cat{
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+   
+}
+.category-child{
+    width: 120px;
+    /* border: 1px solid red; */
+    text-align: center;
+    margin-left: 30px;
+}
+
+.category-child a img{
+    width: 60%;
+}
+.category-child p{
+    text-align: center;
+    font-size: small;
+}
+
+
+/* -------------------------------------------------------------------- */
+
+
+.container{
+    background-color: #f2f2f2;
+    /* border:1px solid red; */
+    margin-bottom: 20px;
+    padding-bottom: 60px;
+}
+.container-child{
+    margin: auto;
+    width: 1500px;
+    /* border:1px solid red; */
+
+}
+.timer-parent{
+    height: 75px;
+    width: 1500px;
+    /* border:1px solid rgb(255, 0, 0); */
+    margin-left: 155px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.container-box{
+    /* border: 1px solid rgb(0, 255, 55); */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background: #f2f2f2;
+    gap: 20px;
+    padding: 20px;
+}
+.container-box-child{
+   /* border: 1px solid rgb(0, 8, 255); */
+    padding-top: 20px;
+    line-height: 20px;
+    padding-left: 25px;
+    padding-right: 10px;
+    background: #fff;
+}
+.container-box-child:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     cursor: pointer;
+     transform: translateY(-5px);
+     transition: all 0.1s ease;
+}
+.container-box-child>img{
+    width: 90%;
+}
+.container-box-child a{
+    font-size: 14.2px;
+    font-weight: 500;
+    color: rgb(86, 86, 86);
+    letter-spacing: 0.5px;
+}
+.container-box-child a>img{
+    width: 65px;
+    height: 20px;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
+.container-box-child p{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(248, 0, 0);
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.container-box-child  del{
+    font-size: 14.2px;
+    font-weight: 500;
+    color: rgb(140, 140, 140);
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.container-box-child  button{
+    width: 90px;
+    height: 28px;
+    background: rgb(223, 0, 0);
+    color: #fff;
+    font-size: 14.2px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* -------------------------------------------- */
+
+.deal {
+	width: 340px;
+	height: 34px;
+	margin-left: 15px;
+	/* border: 1px solid blue; */
+}
+.timer-1{
+    background: rgb(227, 224, 224);
+    padding: 8px;
+    margin-top: 35px;
+    margin-left: 3px;
+    border-radius: 5px;
+}

@@ -9,10 +9,11 @@
 			href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 
             <link rel="stylesheet" href="//content1.geekbuying.com/V1.4/en/css/icon_font.min.css?v=20221107" type="text/css">
-            <link rel="icon" type="images" href="/images/fav-icon.png">
+            <link rel="icon" type="images" href="/images/fav.png">
 		<title>
 			Geekbuying: Online Shopping for Smart and Comfortable Life
 		</title>
+    
         <link rel="stylesheet" href="/css/head-top.css" type="text/css">
         <link rel="stylesheet" href="/css/mid.css">
         <link rel="stylesheet" href="/css/sticky.css">
@@ -22,7 +23,7 @@
         <link rel="stylesheet" href="/css/banner.css">
         <link rel="stylesheet" href="/css/mid-slider.css">
         <link rel="stylesheet" href="/css/signUp-box.css">
- 
+     
 	</head>
 	<body>
         <div class="top_gd" >
@@ -47,19 +48,35 @@
                         </div>
                         <div class="h-top-child">
                             <span>
-                                <p>Language</p>
-                                <i class="upArrow"></i>
+                                <p class="upArrow">Language</p>
+                               
                             </span>
                         </div>
                         <div class="h-top-child">
                             <span>
-                                <p>Support Center</p>
-                                <i class="upArrow"></i>
+                                <p class="upArrow">Support Center</p>
+                                
                             </span>
                         </div>
                     </div>
                     <div class="none-element">
                         <div class="none-parent-1">
+                            <i class='bx bxs-up-arrow'></i>
+                            <div class="none-box">
+                                <div><a href="#">Download app to get up to 70% off app-only deals and coupons worth $50</a></div>
+                                <div>
+                                    <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" alt="">
+                                    <div>
+                                        <div><a href="#"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt=""></a></div>
+                                        <div><a href="#"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt=""></a></div>
+                                        <div><a href="#"><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt=""></a></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div><a href="#">Go to mobile</a></div>
+                            </div>
+                        </div>
+                        <div class="none-parent-1 sticky-app">
                             <i class='bx bxs-up-arrow'></i>
                             <div class="none-box">
                                 <div><a href="#">Download app to get up to 70% off app-only deals and coupons worth $50</a></div>
@@ -129,7 +146,7 @@
 			</div>
             <div class="mid">
                     <div class="top-mid" id="mid">
-                            <img src="/images/logo.png" alt="">
+                            <img src="/images/logo.png" id="logo" alt="">
                             <div class="input">
                                 <div class="dropdown">
                                     <button class="dropbtn">
@@ -152,14 +169,15 @@
                             </div>
                             <div class="sign-up">
                                 <div>
-                                    <p id="ship">Ship to 🚍/ INR</p>
-                                    <i class='upArrow' id="inrArrow"></i>
+                                    <p id="ship" class='upArrow'>Ship to 🚚/ INR</p>
+                                    <i  id="inrArrow"></i>
                                 </div>
                                 <div class="sign-up-child">
                                     <i class="icon-user"></i>
                                     <p>Sign in</p>
                                 </div>
                             </div>
+                            <span class='cart-number'>0</span>
                             <div class="sign-up-child cart-box">
                                 <i class="icon-cart_b"></i>
                             </div>
@@ -182,19 +200,23 @@
                         </div>
                     </div>
                     <div class="sign-parent inr">
-                        <div class="sign-up-box inr-box">
+                        <div class="sign-up-box inr-box" id="inr-box">
                             <i class='bx bxs-up-arrow inr-arrow'></i>
-                             <p>Welcome to Geekbuying</p>
-                             <div class="btn-div">
-                                <button id="leftBtn">Join</button>
-                                <button id="rightBtn">Sign In</button>
-                             </div>
-                             <div class="hr-div">
-                                <hr>
-                                <p>or</p>
-                                <hr>
-                             </div>
-                            <img src="/images/icon-google.png" alt="" id="google">
+                            <!-- <select name="" id="selected"> -->
+                                <p>India</p>
+                                <!-- </select> -->
+                                <img style="width: 50%;border-radius: 0px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/2560px-Flag_of_India.png" 
+                                alt="">
+                             
+                        </div>
+                    </div>
+                    <div id="cart-box-parent">
+                        <div id="cart-box">
+                            <div>
+                                <i class='bx bxs-up-arrow inr-arrow cart-box-arrow' ></i>
+                                <p>The Shopping Cart is Empty!</p>
+                            </div>
+                            
                         </div>
                     </div>
             </div>
@@ -212,7 +234,7 @@
                     <div class="menu"><a href="#">Bestselling</a></div>
                     <div class="menu"><a href="#">Brand</a></div>
                     <div class="menu"><a href="#">Clearance</a></div>
-                    <div class="menu"><a href="#">Deals</a></div>
+                    <div class="menu" ><a href="/html/cart-page.html">Deals</a></div>
                     <div class="menu"><a href="#">Coupon</a></div>
                     <div class="menu"><a href="#">App Only</a></div>
                 </div>
@@ -278,6 +300,7 @@
 				</div>
 			</div>
 		</div>
+
         <div class="right-stikcy-box">
             <div><a href=""><i   class="icon-cart_b"></i></a></div>
             <div><a href=""><i class='icon-live_chat_b'></i></a></div>
@@ -1007,22 +1030,10 @@
     
                     <div class="foot_payment">
                         <span class="payment_icon foot_icon"></span>
-                        <a
-                            class="geek_reviews foot_icon"
-                            href="https://www.resellerratings.com/store/geekbuying/?utm_source=GKBBO&amp;utm_medium=BO&amp;utm_campaign=GKB_BO1604_geekbuying"
-                            target="_blank"
-                            rel="nofollow"></a>
-                        <a
-                            class="geek_trustpilot foot_icon"
-                            href="https://www.trustpilot.com/review/geekbuying.com"
-                            target="_blank"
-                            rel="nofollow"></a>
-                  
+                            <div>
+                                <img src="/images/footer.jpg" id="footer-img" alt="">
+                             </div>
                     </div>
-                    <div>
-                        <img src="/image/footer-img.jpg" alt="">
-                    </div>
-                </div>
 
                     <div class="foot_copyright">
                         Copyright © 2012-2022 GeekBuying.com. All rights reserved.
@@ -1039,3 +1050,5 @@
 <script src="/scripts/timer.js"></script>
 <script src="/scripts/sticky.js"></script>
 <script src="/scripts/mid-slider.js"></script>
+<script src="/scripts/cart.js"></script>
+<script src="/scripts/inr.js"></script>

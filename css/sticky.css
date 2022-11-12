@@ -31,6 +31,9 @@
 .right-stikcy-box .icon-cart_b::before {
 	color: #0066ff;
 }
+.right-stikcy-box .icon-cart_b::before {
+	color: #0066ff;
+}
 .right-stikcy-box .icon-live_chat_b::before {
 	color: #0066ff;
 }
@@ -53,3 +56,7 @@
 	position: relative;
 	width: 44px;
 }
+
+/* .right-stikcy-box>div:hover{
+    background: #0066ff;
+} */

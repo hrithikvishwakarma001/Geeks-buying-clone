@@ -344,7 +344,7 @@
 	</head>
 	<body>
 		<div class="logo_top">
-			<a class="logo_img" href="/" target="_blank"></a>
+			<a class="logo_img" href="/html/index.html" target="_blank"></a>
 		</div>
 		<div class="login_box">
 			<div class="bg_ad">
@@ -364,7 +364,7 @@
 					<span class="login_title">Sign In</span>
 					<label class="login_input loginPrent">
 						<input
-							type="text"
+							type="email"
 							name="emailAddress"
 							class="loginInput"
 							id="emailAddress"
@@ -453,7 +453,46 @@
     document.getElementById('google').onclick=()=>{
         window.location.href = '/html/login-page.html';
     }
-    setTimeout(()=>{
-        window.location.href = '/html/login-page.html';
-    },10000)
+
+	let loginBtn = document.getElementById('loginBtn');
+	loginBtn.onclick = () => {
+		let email = document.getElementById('emailAddress').value;
+		let password = document.getElementById('password').value;
+		console.log(email, password);
+		if(email == '' || password == ''){
+			alert('Please enter your email and password');
+		}else{
+			
+			let arr = JSON.parse(localStorage.getItem('users'));
+			console.log(arr);
+			if(arr==null){
+				alert('Please create account first');
+			}else{
+				let flag = false;
+				for(let i=0;i<arr.length;i++){
+					if(arr[i].email == email && arr[i].password == password){
+						flag = true;
+						break;
+					}
+				}
+				if(flag){
+					let login_cont = document.querySelector('.login_cont');
+					login_cont.innerHTML = ''
+					let img = document.createElement('img');
+					img.src="https://cdn.dribbble.com/users/1751799/screenshots/5512482/media/1cbd3594bb5e8d90924a105d4aae924c.gif"
+					img.style.width = '100%';
+					let login_succes = document.createElement('h1');
+					login_succes.innerHTML='Login Successfull';
+					login_succes.style.textAlign = 'center';
+					login_cont.append(img,login_succes);
+					setInterval(()=>{
+						window.location.href = '/html/index.html';
+					},4000)
+				}else{
+					alert('Email or password is incorrect');
+				}
+			}
+		}
+			
+	  }
 </script>
