@@ -5,8 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .right-stikcy-box {
+	width: 44px;
+	position: fixed;
+	top: 50%;
+	right: 20px;
+	z-index: 101;
+	border-radius: 8px 0 0 8px;
+	/* border: 1px solid red; */
+}
+.right-stikcy-box > div {
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica,
+		sans-serif;
+	font-weight: 400;
+	line-height: 1px;
+	text-align: center;
+	/* border: 1px solid red; */
+	background: #f1f6fd;
+}
+
+.right-stikcy-box a {
+	font-size: 20px;
+	height: 50px;
+	position: relative;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	top: 15px;
+}
+.right-stikcy-box .icon-cart_b::before {
+	color: #0066ff;
+}
+.right-stikcy-box .icon-cart_b::before {
+	color: #0066ff;
+}
+.right-stikcy-box .icon-live_chat_b::before {
+	color: #0066ff;
+}
+.right-stikcy-box .icon-app::before {
+	color: #0066ff;
+}
+.right-stikcy-box .icon-top::before {
+	color: #0066ff;
+}
+.icon-user::before {
+	color: #fff;
+	font-size: 20px;
+	position: relative;
+	bottom: 5px;
+	right: 5px;
+}
+.right-stikcy-box i {
+	height: 50px;
+	display: block;
+	position: relative;
+	width: 44px;
+}
+
+/* .right-stikcy-box>div:hover{
+    background: #0066ff;
+} */
+    </style>
 </head>
 <body>
-    <img src="/images/captcha.jpg" alt="">
+    <div class="right-stikcy-box">
+        <div><a href=""><i   class="icon-cart_b"></i></a></div>
+        <div><a href=""><i class='icon-live_chat_b'></i></a></div>
+        <div><a href=""><i class=' icon-app'></i></a></div>
+        <div><a href="#head"><i class=' icon-top'></i></a></div>
+    </div>
 </body>
 </html>
