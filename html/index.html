@@ -23,9 +23,18 @@
         <link rel="stylesheet" href="/css/banner.css">
         <link rel="stylesheet" href="/css/mid-slider.css">
         <link rel="stylesheet" href="/css/signUp-box.css">
+        <link rel="stylesheet" href="/css/allCatagory.css">
      
 	</head>
 	<body>
+         
+        <div class="right-stikcy-box">
+            <div><a href="/html/product.html"><i   class="icon-cart_b"></i></a></div>
+            <div><a href=""><i class='icon-live_chat_b'></i></a></div>
+            <div><a href=""><i class=' icon-app'></i></a></div>
+            <div><a href="#head"><i class=' icon-top'></i></a></div>
+        </div>
+         
         <div class="top_gd" >
             <div class="wrap_w">
                 <a href="https://promotion.geekbuying.com/promotion/1111_sale?pmrm=site-top-banner" target="_blank">
@@ -35,6 +44,38 @@
             </div>
         </div>
 		<header>
+            <div id="allCatagory">
+                <div class="allCatagoryChild">
+                    <a href="#">
+                        <p>All Categories</p>
+                    </a><a href="#">
+                        <p>Smart Home & Garden</p>
+                    </a><a href="#">
+                        <p>Phones & Accessories</p>
+                    </a><a href="#">
+                        <p>Computers, Tablets & Accessories</p>
+                    </a><a href="#">
+                        <p>wearable Devices</p>
+                    </a><a href="#">
+                        <p>Automobiles & Motorcycles</p>
+                    </a>
+                </div>
+                <div class="allCatagoryChild">
+                    <a href="#">
+                        <p>Sports & Outdoors</p>
+                    </a><a href="#">
+                        <p>Consumer Electronics</p>
+                    </a><a href="#">
+                        <p>TV Boxes & Mini PCs</p>
+                    </a><a href="#">
+                        <p>Toys & Hobbies</p>
+                    </a><a href="#">
+                        <p>Security System</p>
+                    </a><a href="#">
+                        <p>Fashion</p>
+                    </a>
+                </div>
+            </div>
            
 			<div class="head" id="head">
                 <div class="top-head">
@@ -190,30 +231,37 @@
                              <div class="btn-div">
                                 <button id="leftBtn">Join</button>
                                 <button id="rightBtn">Sign In</button>
-                             </div>
-                             <div class="hr-div">
+                            </div>
+                            <div class="hr-div">
                                 <hr>
                                 <p>or</p>
                                 <hr>
-                             </div>
+                            </div>
                             <img src="/images/icon-google.png" alt="" id="google">
                         </div>
                     </div>
                     <div class="sign-parent inr">
                         <div class="sign-up-box inr-box" id="inr-box">
                             <i class='bx bxs-up-arrow inr-arrow'></i>
-                            <!-- <select name="" id="selected"> -->
-                                <p>India</p>
-                                <!-- </select> -->
+                            <label for="" class="lable">Ship to</label>
+                            <select name="" class="selected">
+                                <option value=""> India</option>
+                            </select>
+                            <label for="" class="lable">Currency</label>
+                            <select name="" class="selected">
+                                <option value="">INR ₹</option>
+                                </select>
+                                <button id="inr-btn" class="inr-btn">Save</button>
+                                
+                                <!-- <p>India</p>
                                 <img style="width: 50%;border-radius: 0px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/2560px-Flag_of_India.png" 
-                                alt="">
-                             
+                                alt=""> -->
                         </div>
                     </div>
                     <div id="cart-box-parent">
                         <div id="cart-box">
                             <div>
-                                <i class='bx bxs-up-arrow inr-arrow cart-box-arrow' ></i>
+                                <i class='bx bxs-up-arrow inr-arrow cart-box-arrow' id="cart-id" ></i>
                                 <p>The Shopping Cart is Empty!</p>
                             </div>
                             
@@ -234,7 +282,7 @@
                     <div class="menu"><a href="#">Bestselling</a></div>
                     <div class="menu"><a href="#">Brand</a></div>
                     <div class="menu"><a href="#">Clearance</a></div>
-                    <div class="menu" ><a href="/html/cart-page.html">Deals</a></div>
+                    <div class="menu" ><a href="/html/cart-page.html" style="color: red;background: #fff;padding: 2px 10px;">Deals</a></div>
                     <div class="menu"><a href="#">Coupon</a></div>
                     <div class="menu"><a href="#">App Only</a></div>
                 </div>
@@ -300,13 +348,6 @@
 				</div>
 			</div>
 		</div>
-
-        <div class="right-stikcy-box">
-            <div><a href=""><i   class="icon-cart_b"></i></a></div>
-            <div><a href=""><i class='icon-live_chat_b'></i></a></div>
-            <div><a href=""><i class=' icon-app'></i></a></div>
-            <div><a href="#head"><i class=' icon-top'></i></a></div>
-        </div>
 		<main>
             <div class="main" id="mid">
                     <div> 
@@ -1052,3 +1093,5 @@
 <script src="/scripts/mid-slider.js"></script>
 <script src="/scripts/cart.js"></script>
 <script src="/scripts/inr.js"></script>
+<script src="/scripts/allCatagory.js"></script>
+<script src="/scripts/product.js"></script>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shopping cart - Geekbuying.com</title>
+		<link rel="stylesheet" href="/css/product.css" />
+        <style>
+            .img{
+                width: 240px;
+                height: 240px;
+                position: absolute;
+                left: 100px;
+                top: -65px;
+
+            }
+        </style>
+
+	</head>
+	<body>
+            <a href="/html/index.html">
+                <img src="/images/logo.png"  class="img" alt="">
+            </a>
+           
+      
+		<div class="shop_headbg">
+			<div class="shop_icon warpth">
+				<span class="shop_secure">Secure Checkout</span>
+				<div class="shop_icon_txt">
+					<dl class="dline">
+						<dd class="dlinea active"></dd>
+						<dd>
+							<i class="active"></i
+							><span class="step1 active_color">Cart</span>
+						</dd>
+						<dd>
+							<i></i><span class="step2">Place Order</span
+							><em></em><span class="step3">Pay</span>
+						</dd>
+						<dd></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<h1>Your total cart price is:- <span id="cart-total">0</span></h1>
+		<div class="total"></div>
+		<div class="container"></div>
+	</body>
+</html>
+
+<script>
+    // document.getElementById("container").innerHTML = "";
+
+	let cartItems = JSON.parse(localStorage.getItem("cartItems"))
+	console.log(cartItems);
+    let display = (cartItems) => {
+	let container = document.querySelector(".container");
+    container.innerHTML = "";
+    
+    let total = cartItems.reduce((sum,x)=>sum+=x.price,0)
+    document.getElementById('cart-total').innerHTML=`$${total.toFixed(2)}`
+    
+	cartItems.forEach((el,i) => {
+        total.toFixed(2)
+		let div = document.createElement("div");
+		let img = document.createElement("img");
+		let productName = document.createElement("span");
+		let price = document.createElement("p");
+        let btnDiv = document.createElement("div");
+		img.src = el.image;
+		productName.innerHTML = el.name;
+		price.innerHTML = el.price.toFixed(2);
+        productName.id="name"
+		let plus = document.createElement("button");
+		let span = document.createElement("span");
+		let minus = document.createElement("button");
+        plus.setAttribute('id','plus')
+        minus.setAttribute('id','minus')
+
+		plus.innerText = "+";
+		span.innerText = 1;
+		minus.innerText = "-";
+
+        plus.addEventListener("click", () => {
+            span.innerText = parseInt(span.innerText) + 1;
+            total += el.price;
+            document.getElementById('cart-total').innerHTML=`$${ total.toFixed(2)}`
+        });
+        minus.addEventListener("click", () => {
+            if (parseInt(span.innerText) > 1) {
+                span.innerText = parseInt(span.innerText) - 1;
+            }
+            total -= el.price;
+            document.getElementById('cart-total').innerHTML=`$${ total.toFixed(2)}`
+        });
+        
+        let remove = document.createElement("button");
+        remove.id = "remove";
+        remove.innerText = "Remove";
+        remove.onclick = () => {
+            cartItems.splice(i, 1);
+            total -= el.price;
+            localStorage.setItem('cartItems',JSON.stringify(cartItems))
+            display(cartItems)
+            document.getElementById('cart-total').innerHTML=`$${ total.toFixed(2)}`
+        }
+        if(el.quantity>0){
+            btnDiv.append(plus, span, minus);
+            div.append(img, productName, price,btnDiv,remove);
+            container.append(div);
+        }
+		container.append(div);
+	});
+}
+    display(cartItems)
+</script>

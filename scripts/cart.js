@@ -65,6 +65,7 @@ for (let i = 0; i < btn.length; i++) {
         button.style.color = "black"
         button.style.border = "1px solid black"
         button.innerHTML = "Remove"
+        
     }
     button.onclick = () => {
         if(button.innerHTML == "Remove"){
@@ -76,7 +77,7 @@ for (let i = 0; i < btn.length; i++) {
             button.style.backgroundColor = "green"
             button.style.color = "white"
             button.innerHTML = "Add to Cart"
-            localStorage.setItem("btn"+i, "Add to Cart")
+            localStorage.setItem("btn"+i, "Remove")
         }
         else{
             alert("Item added to cart")
@@ -90,7 +91,47 @@ for (let i = 0; i < btn.length; i++) {
             button.innerHTML = "Added"
             localStorage.setItem("btn"+i, "Added")
         }
+        
+
+        let cartItemsArray = JSON.parse(localStorage.getItem("cartItems")) || []
+
+        let productDetails = document.querySelectorAll(".container-box-child")
+        let product = productDetails[i]
+        let productImage = product.querySelector("img").src
+        let productName = product.querySelector("span").innerHTML
+        let productPrice = Number(product.querySelector("p").innerHTML.slice(1))
+        let productQuantity = 1
+        let productObject = {
+            image: productImage,
+            name: productName,
+            price: productPrice,
+            quantity: productQuantity,
+        }
+        cartItemsArray.push(productObject)
+        localStorage.setItem("cartItems", JSON.stringify(cartItemsArray))
     }
 }
- 
- 
+
+
+// for (let i = 0; i < btn.length; i++) {
+//     let button = btn[i];
+//     button.onclick = () => {
+          
+//         let productDetails = document.querySelectorAll(".container-box-child")
+//         let product = productDetails[i]
+//         let productImage = product.querySelector("img").src
+//         let productPrice = product.querySelector("p").innerHTML
+//         let productQuantity = 1
+//         let productTotal = productPrice
+//         let productObject = {
+//             image: productImage,
+//             price: productPrice,
+//             quantity: productQuantity,
+//             total: productTotal
+//         }
+//         let cartItems = localStorage.getItem("cartItems") || "[]"
+//         let cartItemsArray = JSON.parse(cartItems)
+//         cartItemsArray.push(productObject)
+//         localStorage.setItem("cartItems", JSON.stringify(cartItemsArray))
+//     }
+// }
